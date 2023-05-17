@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">gocarshare</string>
+    <string name="title_activity_main">gocarshare</string>
+    <string name="package_name">com.example.angular</string>
+    <string name="custom_url_scheme">com.example.angular</string>
+</resources>

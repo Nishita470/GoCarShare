@@ -1,0 +1,140 @@
+<!-- Top navigation -->
+<div class="row">
+
+		
+	<!-- <div class="logo"><img id=image src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-car-logo-vector-png-image_5104161.jpg"></div>  -->
+	<div class="navbar-brand" ><h1>GoCarShare</h1></div>
+	
+      
+   
+  </div>
+  
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+	<div class="row">
+  
+	  <nav class="col-md-2 d-md-block bg-light sidebar">
+		<div class="sidebar-sticky">
+		  <ul class="nav flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active">
+				<i class="fas fa-user"></i>User Profile
+			  </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" (click)="calllendee()">
+				  <i ></i>Become Lendee
+				</a>
+			  </li>
+			<!-- Calling SignOut() Api from AuthService -->
+			<li class="nav-item">
+			  <a class="nav-link" (click)="Signout()">
+				<i class="fas fa-sign-out-alt"></i>Log out
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+  
+		  <div class="row" >
+			
+				<div class="vehicle-list">
+				<div class="card vehicle-card"  *ngFor = "let vehicle of userVehicles;let i=index" >
+					<div class="card-body" >
+					  <h2 class="card-title"><b>Registered vehicle</b></h2>
+					  <p class="card-text"> Vehicle Details</p>
+					   <p>Car sub-model: {{vehicle.bodyStyle}}</p>
+						<p>Color: {{vehicle.color}}</p>
+						<p>Registered on: {{vehicle.registeredOn}}</p>
+						<p>Car model: {{vehicle.make}}</p>
+						<p>year: {{vehicle.year}}</p>	
+						<p style="cursor: pointer;" (click)="host(i)">Host</p>
+						<div *ngIf="isHostButtonClicked && i==selectedModelIndex">
+							<p>Listing Price</p>
+							<input  class="form-control" type="text" [(ngModel)]="listingPrice" (ngModelChange)="onListingPrice($event)">
+							<p style="cursor:pointer;" (click)="getLocation()">give location</p>
+							<p>Available From:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableFrom" (ngModelChange)="onAvailableFrom($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableFromTime" (ngModelChange)="onAvailableFromTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmFrom">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							
+							<p>Available Till:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableTo" (ngModelChange)="onAvailableTo($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableToTime" (ngModelChange)="onAvailableToTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmTo">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							<p style="cursor: pointer;" (click)="submitHost(i)">Submit</p>
+						</div>  		
+					  </div>
+				
+				  </div>
+			</div>
+		  </div>
+	
+		  <div class="row">
+			<div class="container h-100">
+			  <div class="d-flex justify-content-center h-100">
+				
+				<div class="searchbar">
+				  <div *ngIf="!showDropdown">
+					<input class="search_input" type="text" [(ngModel)]="searchInput" name="" placeholder="Search..." (ngModelChange)="onsearchInput($event)">
+					<div class="search_icon" (click)="showDropdown = true; searchCars()"><i class="fas fa-search"></i></div>
+				  </div>
+				  <div *ngIf="showDropdown">
+					<select class="search_input">
+
+					</select>
+					<div class="search_icon" (click)="showDropdown = false"><i class="fas fa-times"></i></div>
+				  </div>
+				  <div class="car-card-container">
+					<div class="car-card" *ngFor = "let car of carsRefinedByBodyStyle;let i=index">
+						<p>Car: {{car.make}}</p>
+						<p>Car bodystyle:{{car.body_styles}}</p>
+						<p>Car Model:{{car.model}}</p>
+						<p>Year:{{car.year}}</p>			
+						<p style="cursor: pointer;font-weight:bold;" (click)="register(i)">Register</p>
+						<div *ngIf="isRegisterButtonClicked && i==selectedCarIndex">
+							<p>Color</p>
+							<input  class="form-control" type="text" [(ngModel)]="carColor" (ngModelChange)="onChangeCarColor($event)">
+							<p>Inventory Id</p>
+							<input class="form-control" type="text" [(ngModel)] = "carInventoryId" (ngModelChange)="onChangeCarColor($event)">
+							<p style="cursor: pointer;font-weight:bold" (click)="submitRegistration(i)">Submit</p>
+						</div>  
+					</div>
+				</div>
+				
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<!--Hemanth-->
+  
+		</div>
+		
+	  </main>
+  
+	</div>
+  </div>
+  
+  

@@ -1,0 +1,78 @@
+.car-card-container{
+    margin-top: 2.5rem;
+}
+
+.car-card{
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  }
+  
+  .vehicle-card {
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+card{
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #4b5262;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+ .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+ .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+
+.search_icon{
+    background: white;
+    color: #e74c3c;
+}
+
+ .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #14A44D;
+    text-decoration:none;
+ }
+ /* .example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  } */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoCarShare</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="login-signup.component.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  <script type="text/typescript" src="login-signup.component.ts"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+  <div class="row">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <img id=image src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-car-logo-vector-png-image_5104161.jpg">
+  
+      <div class="navbar-brand" ><h1>GoCarShare</h1></div>
+     
+      <!-- <div class="logo">
+        
+      </div> -->
+    </nav>
+  </div>
+
+  <div class="row sign-in-form ">
+  <div class="cont ">
+  
+    <form>
+      <div class="form sign-in">
+        <h2>Sign In</h2>
+        <label>
+          <span>Email Address</span>
+          <input type="email" name="email-id" (keyup)="onKeySigninEmail($event)">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password-id"  (keyup)="onKeySigninPassword($event)">
+        </label>
+        <button class="submit" type="button" (click) = "submit()">Sign In</button>
+
+        <div class="social-media"></div>
+      </div>
+    </form>
+
+    
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Sign up</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Sign In</span>
+        </div>
+      </div>
+      <div class="form sign-up" id="sign-up-form">
+        <h2>Sign Up</h2>
+        <label>
+          <span>Name</span>
+          <input type="text" (keyup)="onKeyName($event)">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" (keyup)="onKeyEmail($event)">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" (keyup)="onKeyPassword($event)">
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password">
+        </label>
+        <button type="button"  class="submit" (click) = "signup()">Sign Up Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

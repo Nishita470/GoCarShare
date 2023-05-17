@@ -1,0 +1,101 @@
+h5{
+  color:white;
+  text-align:center;
+}
+h1 {
+  display: block;
+  color:black;
+  font-size: 2em;
+  font-family: 'Lilita One', cursive;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+ 
+  
+}
+.logo{
+  padding-left: 20rem;
+  display:flex;
+}
+#image{
+  border-radius: 50%;
+  width:150px;
+  height:150px;
+}
+h4{
+  text-align:center;
+}
+.card-header{
+  background-color:black;
+}
+.nav-title{
+  padding-left: 1rem;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-left:20rem;
+  padding-top: 0%;
+}
+.row{
+  align-items: center;
+}
+.navbar-toggler{
+  padding-left:6rem;
+}
+
+.navbar-brand img {
+  height: 50px; /* adjust to the actual size of your image */
+  margin-right: 10px;
+}
+nav {
+  display: block;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.bg-dark {
+  background-color:white!important;
+}
+p{
+  margin-top:20px;
+}
+.inner-adjust
+{
+  Vertical-align:center;
+}
+span{
+  align-items: center;
+}
+.card:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s ease-in-out;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    margin: 0 auto; 
+    float: none; 
+    flex: 0 1 24%;
+  
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+img{
+    border-radius: 5px 5px 0 0;
+}
+  
+.container {
+    padding: 2px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  

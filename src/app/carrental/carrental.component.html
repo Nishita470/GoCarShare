@@ -1,0 +1,82 @@
+
+<div class="row">
+
+		
+	<div class="logo"><img id=image src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-car-logo-vector-png-image_5104161.jpg"></div> 
+	<div class="navbar-brand" ><h1>GoCarShare</h1></div>
+	
+      
+   
+  </div>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+	<div class="row">	
+		<nav class="col-md-2 d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active">
+							<i class="fas fa-user"></i>User Profile
+						</a>
+					</li>
+					<!-- Calling SignOut() Api from AuthService -->
+					<li class="nav-item">
+						<a class="nav-link" (click)="Signout()" >
+							<i class="fas fa-sign-out-alt" ></i>Log out
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	
+  
+	  <!-- Main content -->
+	  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+
+		  <div class="row">
+  
+			<div class="card-group">
+				<div class="container">
+					<div class="row">
+						 <div class="col-lg-6 mb-4"> 
+							<div class="card mx-auto">					
+								<div class="card" class="d-flex flex-column justify-content-center">
+									<img class="card-img-top" src="https://www.wsfcu.org/wp-content/uploads/2018/09/blog-car-loan.jpg" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">CAR POOL</h5>
+                                        
+										<span routerLink="/carlender" class="btn btn-success">Car Lender</span>
+									</div>
+								</div>
+							 </div> 
+						</div>
+						 <div class="col-lg-6 mb-4"> 
+							<div class="card mx-auto">
+								<div class="card" class="d-flex flex-column justify-content-center">
+									<img class="card-img-top" src="https://media.istockphoto.com/id/1301933699/vector/hand-holds-a-car-and-a-car-key.jpg?s=612x612&w=0&k=20&c=hNwn3d01ZWumRKf8gz3LV_ycc8TVCMV2JO31VNPlF84=" alt="Card image cap">
+									<div class="card-body">
+									  <h5 class="card-title">CAR RENTAL</h5> 
+									  <span routerLink="/carlendee" class="btn btn-success">Car lendee</span>
+									</div>
+							</div>
+						 </div> 
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		  
+		</div>
+  
+		</div>
+	  </main>
+	</div>
+</div>
+  
+	
+
+	
+
+  

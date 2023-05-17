@@ -1,0 +1,151 @@
+.car-card-container{
+    margin-top: 2.5rem;
+}
+h1 {
+    display: block;
+    color:black;
+    font-size: 3rem;
+    font-family: 'Lilita One', cursive;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+   
+    
+  }
+.navbar-brand{
+    padding-left: 20rem;
+}
+.logo{
+    padding-left: 20rem;
+   
+    display:flex;
+  }
+
+  .car-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .car-card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 16px;
+    
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+  }
+  
+  .car-card p {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  
+  .car-card p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .car-card p:last-child {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .car-card input {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .car-card input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    padding: 8px 0;
+    background-color: transparent;
+    color: #333333;
+  }
+  
+  .car-card input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid #007bff;
+  }
+/*   
+.car-card{
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+} */
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  }
+  
+  .vehicle-card {
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+/* .card{
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}*/
+.searchbar{ 
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #4b5262;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+ .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+ .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+
+.search_icon{
+    background: white;
+    color: #e74c3c;
+}
+
+ .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #14A44D;
+    text-decoration:none;
+ }
+ /* .example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  } */

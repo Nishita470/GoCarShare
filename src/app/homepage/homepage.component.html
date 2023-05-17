@@ -1,0 +1,121 @@
+<!-- Top navigation -->
+<!-- <div class="row d-flex justify-content-between align-items-center">
+
+	<div class="logo"><img id=image src="https://cdn5.vectorstock.com/i/1000x1000/68/44/car-logo-with-circle-hand-colorful-logo-vector-22266844.jpg"></div>
+	<div class="navbar-brand" ><h1>GoCarShare</h1></div>
+	
+</div> -->
+<div class="row">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+		
+	<!-- <div class="logo"><img id=image src="https://cdn5.vectorstock.com/i/1000x1000/68/44/car-logo-with-circle-hand-colorful-logo-vector-22266844.jpg"></div> -->
+	<div class="navbar-brand" ><h1>GoCarShare</h1></div>
+	
+      
+     
+    </nav>
+  </div>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+	<div class="row">	
+		<nav class="col-md-2 d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active">
+							<i class="fas fa-user"></i>User Profile
+						</a>
+					</li>
+			
+					<li class="nav-item">
+						<a class="nav-link" (click)="Signout()" >
+							<i class="fas fa-sign-out-alt" ></i>Log out
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<!--  
+  <div class="container-fluid">
+	<div class="row">	
+	  <nav class="col-md-2 d-md-block bg-light sidebar">
+		<div class="sidebar-sticky">
+		  <ul class="nav flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active">
+				<i class="fas fa-user"></i>User Profile
+			  </a>
+			</li>
+			
+			<li class="nav-item">
+			  <a class="nav-link" >
+				<i class="fas fa-sign-out-alt" routerLink="/Login"></i>Log out
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </nav> -->
+  
+	  <!-- Main content -->
+	  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+  
+	
+		  <!-- Show user data when logged in -->
+		  <div class="row" >
+			<div class="col-md-12">
+			  <div class="media">
+				<!-- <img class="align-self-start mr-5 img-thumbnail rounded-circle" > -->
+				<!-- <div class="media-body">
+				  <h1>Hello: </h1>
+				  <p>User ID: </p>
+				  <p>Email: </p>
+				  <p>Email Verified: </p>
+				</div> -->
+			   
+			</div>
+	  
+			</div>
+		  </div>
+		  <div class="row">
+  
+			<div class="card-group">
+				<div class="container">
+					<div class="row">
+						 <div class="col-lg-6 mb-4"> 
+							<div class="card mx-auto">					
+								<div class="card" style="width: 220%;">
+									<img class="card-img-top" src="https://www.shutterstock.com/image-vector/carpool-service-weekend-journey-young-260nw-1351060844.jpg" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">CAR POOL</h5>
+								
+										<span routerLink="/carpool" class="btn btn-success">Car Pool</span>
+									</div>
+								</div>
+							 </div> 
+						</div>
+						 <div class="col-lg-6 mb-4"> 
+							<div class="card mx-auto">
+								<div class="card" style="width: 220%;">
+									<img class="card-img-top" src="https://static.vecteezy.com/system/resources/thumbnails/010/167/831/small/car-rental-booking-reservation-and-sharing-using-service-mobile-application-with-route-or-points-location-in-hand-drawn-cartoon-flat-illustration-vector.jpg" alt="Card image cap">
+									<div class="card-body">
+									  <h5 class="card-title">CAR RENTAL</h5> 
+									  <span routerLink="/carrental" class="btn btn-success">Car Rental</span>
+									</div>
+							</div>
+						 </div> 
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		  
+		</div>
+  
+		</div>
+	  </main>
+  
+	</div>
+</div>

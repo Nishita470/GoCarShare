@@ -1,0 +1,152 @@
+
+<!-- Top navigation -->
+<div class="row">
+
+		
+	<!-- <div class="logo"><img id=image src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-car-logo-vector-png-image_5104161.jpg"></div>  -->
+	<div class="navbar-brand" ><h1>GoCarShare</h1></div>
+	
+      
+   
+  </div>
+  
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+	<div class="row">
+  
+	  <nav class="col-md-2 d-md-block bg-light sidebar">
+		<div class="sidebar-sticky">
+		  <ul class="nav flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active">
+				<i class="fas fa-user"></i>User Profile
+			  </a>
+			</li>
+			<!-- Calling SignOut() Api from AuthService -->
+			<li class="nav-item">
+				<a class="nav-link" (click)="calllender()" >
+				  <i ></i>Become Lender
+				</a>
+			  </li>
+			<li class="nav-item">
+			  <a class="nav-link" (click)="signout()" >
+				<i class="fas fa-sign-out-alt" ></i>Log out
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+  
+	
+		  <div class="row" >
+           
+                      <div class="vehicle-list">
+                        <div class="card vehicle-card"  *ngFor = "let reserved of userReservations;let i=index" >
+                            <div class="card-body" >
+                              <h2 class="card-title"><b>Reserved vehicle</b></h2>
+                              <p class="card-text"> Details</p>
+                               <p>Price: {{reserved.price}}</p>
+                                <p>Status: {{reserved.status}}</p>
+                                <p>StartDate: {{reserved.startdate}}</p>
+                                <p>End Date: {{reserved.enddate}}</p>
+                                
+                                    
+                                </div>          
+                              </div>
+                              </div>
+		    </div>
+ 
+        
+
+
+			   
+			
+	  
+			</div>
+	
+		  <div class="row">
+			<div class="container h-100">
+			  <div class="d-flex justify-content-center h-100">
+				<div id="map">
+                    <p>Radius:<input type="text" [(ngModel)]="radius" (ngModelChange)="onRadius($event)"></p>
+					<p style="cursor:pointer;" (click)="getLocation()">give location</p>
+					<p>Available From:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableFrom" (ngModelChange)="onAvailableFrom($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableFromTime" (ngModelChange)="onAvailableFromTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmFrom">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							
+							<p>Available Till:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableTo" (ngModelChange)="onAvailableTo($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableToTime" (ngModelChange)="onAvailableToTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmTo">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+
+                            <p style="cursor: pointer;" (click)="findVehicles()">findVehicles</p>
+
+
+                            <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" >
+                                <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+                                
+                              </agm-map> -->
+                           <!-- <google-map height="400px"
+                                        width="750px"
+                                        [center]="center"
+                                        [zoom]="zoom">
+                                        <map-rectangle [bounds]="bounds"></map-rectangle>
+                                    </google-map> -->
+                </div>
+			</div>
+		  </div>
+		
+  
+		</div>
+
+        <div class="row">
+			<div class="container h-100">
+			  <div class="d-flex justify-content-center h-100">
+				  <div class="car-card-container">
+					<div class="car-card" *ngFor = "let vehicle of vehiclesAround;let i=index">
+						<p>VehicleListed On: {{vehicle.listedon}}</p>
+						<p>Available From: {{vehicle.availablefrom}}</p>
+						<p>Available To: {{vehicle.availableto}}</p>
+						<p>Price: {{vehicle.price}}</p>
+                        <p>Vehicle Location: {{vehicle.latitude}},{{vehicle.longitude}}</p>			
+						<!-- <p style="cursor: pointer;" (click)="reserve(i)">Reserve</p> -->
+						<div>
+							<p style="cursor: pointer;" (click)="reserveVehicle(i)">reserve</p>
+						</div>  
+					</div>
+				</div>
+				
+				</div>
+			  </div>
+			</div>
+		  
+		
+	  </main>
+  
+	</div>
+  </div>
+  
+  
